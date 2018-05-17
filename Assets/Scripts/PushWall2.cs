@@ -27,13 +27,13 @@ public class PushWall2 : MonoBehaviour {
     {
 
         //The amount the object is supposed to move this frame in X, Y and Z
-        float amountToMoveThisFrameX = 10 * Time.deltaTime;
-        float amountToMoveThisFrameY = 10 * Time.deltaTime;
-        float amountToMoveThisFrameZ = 10 * Time.deltaTime;
+        float amountToMoveThisFrameX = 1 * Time.deltaTime;
+        float amountToMoveThisFrameY = 0.5f * Time.deltaTime;
+        float amountToMoveThisFrameZ = 1 * Time.deltaTime;
 
         GameObject PusherWall = GameObject.Find("Pushing Wall");
-        PushWall MoveComplete = PusherWall.GetComponent<PushWall>();
-        WallPush = PushWall.MoveComplete;
+        PushWall PushWallScript = PusherWall.GetComponent<PushWall>();
+        WallPush = PushWallScript.MoveComplete;
 
         //The calculation for the object to move
         if (movedSoFarX < MaxMoveAmountX && WallPush == true)

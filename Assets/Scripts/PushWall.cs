@@ -50,7 +50,7 @@ public class PushWall : MonoBehaviour {
             movedSoFarZ -= amountToMoveThisFrameZ;
         }
 
-        if (movedSoFarX == MaxMoveAmountX && movedSoFarY == MaxMoveAmountY && movedSoFarZ == MaxMoveAmountZ) {
+        if (movedSoFarX == MaxMoveAmountX && movedSoFarY > MaxMoveAmountY && movedSoFarZ == MaxMoveAmountZ) {
 
             MoveComplete = true;
 
