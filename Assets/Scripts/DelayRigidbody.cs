@@ -22,8 +22,8 @@ public class DelayRigidbody : MonoBehaviour {
             }
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().isKinematic = false;
-            Debug.Log(gameObject.name + " " + GetComponent<Rigidbody>().isKinematic);
-           // Debug.Log("test");
+            /*Debug.Log(gameObject.name + " " + GetComponent<Rigidbody>().isKinematic);
+            Debug.Log("test"); */
         }
         
     }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushWallTrigger : MonoBehaviour {
+public class PulleyTrigger : MonoBehaviour {
 
-    public static bool Triggered = false;
+    public bool PulleyTriggered = false;
 
     //Used to determine when the object has entered the trigger zone
     private void OnTriggerEnter(Collider other)
@@ -16,7 +16,7 @@ public class PushWallTrigger : MonoBehaviour {
         if (other.gameObject.tag == "Ball")
         {
 
-            Triggered = true;
+            PulleyTriggered = true;
 
         }
     }
