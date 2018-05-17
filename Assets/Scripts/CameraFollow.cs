@@ -2,17 +2,24 @@
 
 public class CameraFollow : MonoBehaviour {
 
+    //The targets for the camera
     public Transform target1;
     public Transform target2;
     public Transform target3;
     public Transform target4;
 
+    //The variables to determine the camera's position, speed and target's position
     public float smoothSpeed = 5f;
     public Vector3 offset;
     private int ActiveCam;
 
     private void FixedUpdate()
     {
+        /*
+        Finds and uses the game camera and references the target from 
+        the variable "ChangeCamera" from the "CameraChange" script.
+        Then uses 'if' statements to change between the different camera targets
+        */
         GameObject Camera = GameObject.Find("Main Camera");
         CameraChange cameraChange = Camera.GetComponent<CameraChange>();
         ActiveCam = CameraChange.ChangeCamera;
