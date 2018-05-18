@@ -31,7 +31,7 @@ public class Pulley : MonoBehaviour {
         //The amount the object is supposed to move this frame
         float amountToMoveThisFrame = 2 * Time.deltaTime;
 
-        GameObject Trigger = GameObject.Find("Pulley Trigger Box");
+        GameObject Trigger = GameObject.Find("Pulley Trigger Box 1");
         PulleyTrigger PulleyScript = Trigger.GetComponent<PulleyTrigger>();
         BallInTrigger = PulleyScript.PulleyTriggered;
 
