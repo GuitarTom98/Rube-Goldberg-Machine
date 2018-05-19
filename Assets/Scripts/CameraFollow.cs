@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour {
     public Transform target2;
     public Transform target3;
     public Transform target4;
+    public Transform target5;
 
     //The variables to determine the camera's position, speed and target's position
     public float smoothSpeed = 5f;
@@ -67,6 +68,17 @@ public class CameraFollow : MonoBehaviour {
 
         }
 
+        if (ActiveCam == 4)
+        {
+
+            Vector3 desiredPosition = target5.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+            transform.position = smoothedPosition;
+
+            transform.LookAt(target5);
+
+        }
+ 
     }
 
 }
